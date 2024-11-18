@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-18T06:08:15.531Z",
+    "end": "2024-11-18T06:08:18.634Z",
+    "duration": 3103,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aba6d828-69e1-4da4-9244-a71f2482806b",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9894b18e-1fdd-43f3-8261-3b3001ada13a",
+          "title": "Test Scenario Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Admin login successfully",
+              "fullTitle": "Test Scenario Login Admin login successfully",
+              "timedOut": null,
+              "duration": 3087,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//arrange\ncy.visit(\"/\");\ncy.contains(\"Login\").should(\"be.visible\");\n//act\ncy.get('input[type=\"email\"]').type(\"superadmin@gmail.com\");\ncy.get('input[type=\"password\"]').type(\"password\");\ncy.get('button[data-testid=\"button-login\"]').click();\n//assert\ncy.get(\".nav-link > .d-sm-none\").should(\"contain\", \"Hi, SuperAdmin\");\ncy.get('a[data-testid=\"dropdown-id\"]').click();\ncy.get('a[data-testid=\"logout-id\"]').should(\"contain\", \"Logout\").click();\ncy.contains(\"Login\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "bd65e59f-05d2-40f0-918a-3bc42a5fade8",
+              "parentUUID": "9894b18e-1fdd-43f3-8261-3b3001ada13a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bd65e59f-05d2-40f0-918a-3bc42a5fade8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3087,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

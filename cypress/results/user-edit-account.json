@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-18T06:26:06.411Z",
+    "end": "2024-11-18T06:26:10.173Z",
+    "duration": 3762,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3c396204-eb9a-4f9a-9444-8a36916dc71b",
+      "title": "",
+      "fullFile": "cypress/e2e/user-edit-account.cy.js",
+      "file": "cypress/e2e/user-edit-account.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8dbdeecf-9696-4839-973c-a7f02cd434cb",
+          "title": "Test Scenario User Edit Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User Successfully Edit Account",
+              "fullTitle": "Test Scenario User Edit Account User Successfully Edit Account",
+              "timedOut": null,
+              "duration": 3735,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../videos/user-edit-account.cy.js.mp4\"",
+              "code": "//arrange\ncy.visit(\"/user-management/user\");\ncy.get('a[href=\"http://127.0.0.1:8000/user-management/user\"]');\ncy.contains(\"User Management\").should(\"be.visible\");\n//act\ncy.get('a[href=\"http://127.0.0.1:8000/user-management/user/2/edit\"]').click();\ncy.contains(\"Edit User\").should(\"be.visible\");\ncy.get(\"#name\").clear().type(\"Ifan Farisqi\");\ncy.get(\"#email\").clear().type(\"adminmagang@gmail.com\");\ncy.get(\".btn-primary\").click().should(\"contain\", \"Submit\");\n//assert\ncy.get(\"p\").should(\"be.visible\");\ncy.get(\"p\").should(\"contain\", \"User Berhasil Diupdate\");",
+              "err": {},
+              "uuid": "837ac81a-a7c3-4845-b5b3-623e5b266ccd",
+              "parentUUID": "8dbdeecf-9696-4839-973c-a7f02cd434cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "837ac81a-a7c3-4845-b5b3-623e5b266ccd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3735,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name].html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "useInlineDiffs": true,
+        "embeddedScreenshots": true,
+        "reportDir": "cypress/results",
+        "reportFilename": "[name].html",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

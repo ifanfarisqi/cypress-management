@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-18T06:25:54.141Z",
+    "end": "2024-11-18T06:25:56.775Z",
+    "duration": 2634,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3243024b-31f8-48a6-9665-18eb41c5ad88",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.js",
+      "file": "cypress/e2e/login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ae76ff17-5619-40e0-96db-d88bed9b0b9a",
+          "title": "Test Scenario Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Admin login successfully",
+              "fullTitle": "Test Scenario Login Admin login successfully",
+              "timedOut": null,
+              "duration": 2619,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"../videos/login.cy.js.mp4\"",
+              "code": "//arrange\ncy.visit(\"/\");\ncy.contains(\"Login\").should(\"be.visible\");\n//act\ncy.get('input[type=\"email\"]').type(\"superadmin@gmail.com\");\ncy.get('input[type=\"password\"]').type(\"password\");\ncy.get('button[data-testid=\"button-login\"]').click();\n//assert\ncy.get(\".nav-link > .d-sm-none\").should(\"contain\", \"Hi, SuperAdmin\");\ncy.get('a[data-testid=\"dropdown-id\"]').click();\ncy.get('a[data-testid=\"logout-id\"]').should(\"contain\", \"Logout\").click();\ncy.contains(\"Login\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "02a85e84-d093-43a7-946d-8e53088c8b82",
+              "parentUUID": "ae76ff17-5619-40e0-96db-d88bed9b0b9a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "02a85e84-d093-43a7-946d-8e53088c8b82"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2619,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name].html",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "useInlineDiffs": true,
+        "embeddedScreenshots": true,
+        "reportDir": "cypress/results",
+        "reportFilename": "[name].html",
+        "overwrite": true,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
